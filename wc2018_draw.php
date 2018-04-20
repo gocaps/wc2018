@@ -87,7 +87,7 @@ $gH = _hlp_jsonify($ht1, $ht2, $ht3, $ht4);
 $draw = ['groupA' => $gA, 'groupB' => $gB, 'groupC' => $gC, 'groupD' => $gD, 'groupE' => $gE, 'groupF' => $gF, 'groupG' => $gG, 'groupH' => $gH];
 echo json_encode($draw);
 
-function _hlp_jsonify($type, &$t1, &$t2, &$t3, &$t4) {
+function _hlp_jsonify(&$t1, &$t2, &$t3, &$t4) {
 	$g = [];
 	for($i=1; $i<=4; $i++) {
 		$g["team$i"] = ${"t".$i};
